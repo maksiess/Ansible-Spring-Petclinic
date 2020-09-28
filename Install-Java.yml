@@ -1,9 +1,12 @@
 ---
 - hosts: all
+  user: centos
+  become: yes
+  become_method: sudo
 
-  tasks: 
+  tasks:
   - name: Installing Java
-    yum: 
+    yum:
       name: "java-1.8.0-openjdk"
       state: latest
     become: true

@@ -1,14 +1,17 @@
---- 
-- 
-  hosts: all
-  tasks: 
+---
+- hosts: all
+  user: centos
+  become: yes
+  become_method: sudo
+
+  tasks:
     - 
-      args: 
+      args:
         chdir: /var/www/spring-petclinic/
       command: "./mvnw package"
       name: "Starting Spring-Petclinic"
     - 
-      args: 
+      args:
         chdir: /var/www/spring-petclinic/
       command: "nohup java -jar spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar &"
       name: "Starting Spring-Petclinic Java"

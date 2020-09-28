@@ -1,11 +1,13 @@
 ---
-- name: Install Spring-Petclinic
-  hosts: all
+- hosts: all
+  user: centos
+  become: yes
+  become_method: sudo
 
-  tasks: 
+  tasks:
   - name: Install prerequisites
-    package: 
-      name: 
+    package:
+      name:
       - vim
       - wget
       - git
@@ -18,13 +20,13 @@
       dest: /var/www/spring-petclinic/
 
   - name: Install Java
-    yum: 
+    yum:
       name: "java-1.8.0-openjdk"
       state: latest
     become: true
 
   - name: Install Maven
-    yum: 
+    yum:
       name: maven
       state: latest
     become: true

@@ -1,9 +1,12 @@
 ---
 - hosts: all
+  user: centos
+  become: yes
+  become_method: sudo
 
-  tasks: 
+  tasks:
   - name: Pulling Repository
-    git: 
+    git:
       repo: "{{ petclinic_repo }}"
       version: "{{ petclinic_branch }}"
       dest: /var/www/spring-petclinic/
