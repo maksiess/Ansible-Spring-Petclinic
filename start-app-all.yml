@@ -11,7 +11,7 @@
     - name: "Starting Spring-Petclinic Java"
       args:
         chdir: /var/www/spring-petclinic/
-      shell: "nohup java -jar spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar &"
+      shell: "nohup java -jar /var/lib/jenkins/petclinic/target/spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar &"
       
       
 
