@@ -4,4 +4,4 @@
   tasks: 
 
   - name: Changing Application's Name
-    shell: "mv target/*.jar target/app.jar /var/www/spring-petclinc/target"
+    shell: "mv target/*.jar target/app.jar /var/www/spring-petclinc/target &"
