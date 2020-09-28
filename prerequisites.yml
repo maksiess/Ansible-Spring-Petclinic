@@ -4,7 +4,7 @@
   tasks: 
   - name: Installing Prerequisites
     package: 
-    name: 
+      name: 
     - vim
     - wget
     - git
