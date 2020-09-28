@@ -2,7 +2,7 @@
 - hosts: all
 
   tasks:
-  - name: Pulling Repository
+  - name: Pulling Spring-Petclinic
     git:
       repo: "{{ petclinic_repo }}"
       version: "{{ petclinic_branch }}"
