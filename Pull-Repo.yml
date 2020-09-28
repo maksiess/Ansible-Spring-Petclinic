@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  user: centos
 
   tasks:
   - name: Pulling Repository
