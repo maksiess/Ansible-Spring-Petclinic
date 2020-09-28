@@ -8,4 +8,4 @@
       - vim,
       - wget,
       - git,
-    state: present
+      state: present
