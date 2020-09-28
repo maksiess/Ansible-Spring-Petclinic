@@ -5,7 +5,7 @@
   - name: Install prerequisites
     package:
       name:
-      - vim,
-      - wget,
-      - git,
+      - vim
+      - wget
+      - git
       state: present
