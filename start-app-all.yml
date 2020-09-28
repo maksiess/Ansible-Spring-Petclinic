@@ -3,15 +3,15 @@
 
   tasks:
     - name: "Starting Spring-Petclinic"
-      shell: "./mvnw package"
       args:
         chdir: /var/www/spring-petclinic/
+      shell: "./mvnw package"
       
       
     - name: "Starting Spring-Petclinic Java"
-      shell: "nohup java -jar spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar &"
       args:
         chdir: /var/www/spring-petclinic/
+      shell: "nohup java -jar spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar &"
       
       
 
